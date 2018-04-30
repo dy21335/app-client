@@ -19,12 +19,9 @@ class App extends Component {
   }
 
   componentDidMount(){
-      ContactsAPI.getAll(this.query).then((myjson) => {
-          console.log(myjson);
 
       this.setState({
           items:""
-      })
       })
     }
 
@@ -34,7 +31,7 @@ class App extends Component {
     console.log(this.query);
       ContactsAPI.getAll(this.query).then((myjson) => {
         //测试用例是items
-          console.log(myjson);
+          console.log(myjson.result);
           this.setState({
               items:myjson
           })

@@ -6,13 +6,15 @@ if (!token)
   token = localStorage.token = Math.random().toString(36).substr(-8)
 
 const headers = {
-  'Accept': 'application/json',
+    'Accept': 'application/json',
   'Authorization': token
 }
 
 export const getAll = (query) =>{
     query = query.trim();
-    let url = `http://localhost:5001/${query}`;
+    //腾讯云服务器
+    let url = `http://139.199.219.28:5001/${query}`;
+
     return fetch(`${url}`, {
         method: 'GET',
         headers
