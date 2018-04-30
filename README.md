@@ -53,16 +53,16 @@
 + 关于ContactsAPI的`getall`方法
 
   + ```javascript
-export const getAll = (query) =>{
-    query = query.trim();
-    //腾讯云服务器
-    let url = `http://139.199.219.28:5001/${query}`;
+    export const getAll = (query) =>{
+        query = query.trim();
+        //腾讯云服务器
+        let url = `http://139.199.219.28:5001/${query}`;
 
-    return fetch(`${url}`, {
-        method: 'GET',
-        headers
-    }).then(res => res.json())
-}
+        return fetch(`${url}`, {
+            method: 'GET',
+            headers
+        }).then(res => res.json())
+    }
     ```
 
     在这里面，将`url`值修改成要请求的url，`query`为输入框输入的值；
